@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build and Deploy') {
@@ -47,7 +47,7 @@ pipeline {
                     // Commit and push changes to GitHub
                     sh 'git add .'
                     sh 'git commit -m "Add index.html"'
-                    sh 'git push origin master'
+                    sh 'git push origin'
                 }
             }
         }
